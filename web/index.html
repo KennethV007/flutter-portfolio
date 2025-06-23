@@ -34,5 +34,24 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAdxxC9a8da3kdDofdiLLTRJfcC_05p4eg",
+    authDomain: "flutter-portfolio-fdc01.firebaseapp.com",
+    projectId: "flutter-portfolio-fdc01",
+    storageBucket: "flutter-portfolio-fdc01.firebasestorage.app",
+    messagingSenderId: "618759622606",
+    appId: "1:618759622606:web:73795907bbe66ef48fe59f"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
 </body>
 </html>

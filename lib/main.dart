@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:lottie/lottie.dart';
+import 'dart:html';
+
 
 // Fade-in animation widget
 class FadeInOnScroll extends StatefulWidget {
@@ -256,12 +258,12 @@ class PortfolioPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
                           Text(
-                            'Your Name',
+                            'Kenneth George Valladares',
                             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Aspiring Software Engineer | Flutter & Web Dev Enthusiast',
+                            'Software Development Intern @ Toptech Systems | Flutter & Web Dev Enthusiast',
                             style: TextStyle(fontSize: 18, color: Colors.white70),
                           ),
                         ],
@@ -278,14 +280,21 @@ class PortfolioPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  "I'm a passionate developer with experience in full-stack development. I enjoy building web and mobile applications that solve real-world problems. Let's connect and create something amazing together!",
+                  "I'm a passionate developer with a passion for full-stack development. "
+                  "I enjoy building web and mobile applications that solve real-world problems. " 
+                  " I apply my skills through projects, internships, and ideas that contribute to the progress of the digital age.",
                   style: TextStyle(fontSize: 16),
                 ),
                 const SizedBox(height: 24),
 
                 // Resume Button
                 ElevatedButton(
-                  onPressed: () => _launchURL('https://example.com/resume.pdf'),
+                  onPressed: () {
+                    const url = 'assets/resume.pdf';
+                    AnchorElement(href: url)
+                      ..setAttribute('download', 'Kenneth_Resume.pdf') // <- sets the filename
+                      ..click();
+                  },
                   child: const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                     child: Text('Download Resume', style: TextStyle(fontSize: 16)),
@@ -303,12 +312,12 @@ class PortfolioPage extends StatelessWidget {
                   spacing: 16,
                   runSpacing: 16,
                   children: const [
-                    ProjectCard(title: 'Fitness Tracker App', description: 'Tracks workouts with Flutter and Supabase.'),
-                    ProjectCard(title: 'Smart Budgeting Tool', description: 'MERN app with analytics and Stripe integration.'),
-                    ProjectCard(title: 'Portfolio Website', description: 'This site, built in Flutter and hosted on Vercel.'),
-                    ProjectCard(title: 'AI Note Summarizer', description: 'Summarizes uploaded text using Gemini AI API.'),
-                    ProjectCard(title: 'Social Chat App', description: 'Flutter-Firebase chat app with user auth and storage.'),
-                    ProjectCard(title: 'Weather Forecast App', description: 'Clean and animated weather app using OpenWeatherMap.'),
+                    ProjectCard(title: 'Fitness Tracker App', description: 'Tracks and suggests workouts for beginners using MERN.'),
+                    ProjectCard(title: 'Nokia Contact Manager', description: 'LAMP Stack contact manager with a retro feel.'),
+                    ProjectCard(title: 'Portfolio Website', description: 'This site, built in Flutter and hosted on Firebase.'),
+                    ProjectCard(title: 'Orlando Korean Culture Center Website', description: 'Function, homegrown website built for the OKCC to automate payments and signsups using PERN.'),
+                    ProjectCard(title: 'Autocommit.AI', description: 'To be announced: Github auto committer with AI changelist generation.'),
+                    ProjectCard(title: 'Stride', description: 'To be announced: Practical tool for runners to improve form using AI, Machine Learning, and Computer Vision.'),
                   ],
                 ),
                 const SizedBox(height: 48),
@@ -321,11 +330,12 @@ class PortfolioPage extends StatelessWidget {
                 const SizedBox(height: 16),
                 Column(
                   children: const [
+                    TimelineEvent(year: '2022', event: 'Discovered computer science during AP Principles'),
                     TimelineEvent(year: '2023', event: 'Started CS degree at UCF.'),
-                    TimelineEvent(year: '2022', event: 'Built first Flutter mobile app.'),
-                    TimelineEvent(year: '2023', event: 'Interned at Company A and launched production tool.'),
-                    TimelineEvent(year: '2024', event: 'Started full-stack portfolio and began AI specialization.'),
-                    TimelineEvent(year: '2027', event: 'Graduating and seeking Software Engineer role.'),
+                    TimelineEvent(year: '2024', event: 'Built first data structures (2-4 Tree and SkipList.)'),
+                    TimelineEvent(year: '2025', event: 'Accepted into the UCF Accelerated Masters program'),
+                    TimelineEvent(year: '2025', event: 'Begun internship at Toptech Systems'),
+                    TimelineEvent(year: '2027', event: 'Graduating and seeking Software Engineer role at big tech'),
                   ],
                 ),
                 const SizedBox(height: 48),
@@ -339,15 +349,15 @@ class PortfolioPage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    CourseChip('Data Structures & Algorithms'),
+                    CourseChip('Intro to Progamming'),
                     CourseChip('Object-Oriented Programming in Java'),
-                    CourseChip('Operating Systems'),
-                    CourseChip('Database Systems (SQL, NoSQL)'),
-                    CourseChip('Web Development with MERN'),
-                    CourseChip('Mobile App Dev with Flutter'),
-                    CourseChip('AI & Machine Learning Basics'),
-                    CourseChip('Compiler Design & Architecture'),
-                    CourseChip('Cloud Computing with AWS'),
+                    CourseChip('Computer Science 1'),
+                    CourseChip('Computer Science 2'),
+                    CourseChip('Security in Computing'),
+                    CourseChip('Computer Logic and Organization'),
+                    CourseChip('Systems Software'),
+                    CourseChip('Discrete Mathematics'),
+                    CourseChip('Processes of Object-Oriented Software Development'),
                   ],
                 ),
                 const SizedBox(height: 48),
@@ -364,12 +374,16 @@ class PortfolioPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'My Dreams',
+                        'My Dream',
                         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                       ),
                       const SizedBox(height: 16),
                       const Text(
-                        'One day, I hope to live and work between two of the most beautiful cities I have ever visited — Seoul and Washington D.C. Their contrast in culture, architecture, and pace of life has inspired me to dream big and think globally.',
+                        "One day, I hope to live and work between two of the most beautiful and important cities in the world — Seoul and Washington D.C. " 
+                        "Their contrast in culture, architecture, and pace of life has inspired me to dream big and think globally. "
+                        "There is so much more to the world than my home town. I hope to travel between these cities to enrich myself in Korean culture, "
+                        "learn more about American History, and become fluent in English, Spanish, and Korean. My favorite flower is the cherry blossom or 벚꽃." 
+                        "If given the privilege to live in Washington D.C. I hope to grow my own cherry blossoms.",
                         style: TextStyle(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
@@ -382,10 +396,32 @@ class PortfolioPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       const Text(
-                        'These cities have reminded me that it is okay to take risks, to leave your comfort zone, and to fall in love with uncertainty. I believe the future is written by those who are brave enough to chase what matters most to them.',
+                        "These cities have reminded me that it is okay to take risks, to leave your comfort zone, and to fall in love with the uncertain. They are opposite to the casual "
+                        "suburban life that I am used to. Cities are high energy environments bustling with creativity, ambition, and opportunity. Moving to a big city is the physical embodiement "
+                        "of stepping out of a comfort zone to pursue opportunity. The cities have endless opportunity for business, software, and cultural enrichiment. "
+                        "I live by the belief that nothing is my life is written until I accomplish it. I believe the future is created by those who are brave enough to chase what matters most to them. "
+                        "Although I am just starting my career, I have the big picture in mind. My goal is to make long-lasting contributions to this planet in the form of software, service, "
+                        "and my future family. When I retire, I would like to look back on all that I have accomplished in my life and be proud of what I did. "
+                        "I aspire to live with no regrets by always pursuing improvement, ambition, and the welfare of those around me. Below is a picture from one of my favorite shows. " 
+                        "This image represents the admiration for our beautiful world for what it is. Earth can be scary for some but exciting for others. Perspective determines what one sees "
+                        "and so I choose to see opportunities in everything.",
                         style: TextStyle(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
+                      const SizedBox(height: 24),
+                      const Center(
+                        child: Text(
+                          '"Opportunities are like sunrises. If you wait too long, you miss them," - William Arthur Ward',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.white70,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
                       const StaticImage(imagePath: 'assets/vision.jpg'),
                     ],
                   ),
@@ -394,7 +430,7 @@ class PortfolioPage extends StatelessWidget {
 
                 const Center(
                   child: Text(
-                    '© 2025 Your Name • Built with Flutter Web',
+                    '© 2025 Kenneth George Valladares • Built with Flutter Web',
                     style: TextStyle(fontSize: 14, color: Colors.white38),
                   ),
                 ),
