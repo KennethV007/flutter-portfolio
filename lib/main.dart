@@ -280,7 +280,7 @@ class PortfolioPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  "I'm a passionate developer with a passion for full-stack development. "
+                  "I'm a passionate developer with an aptitude for full-stack development. "
                   "I enjoy building web and mobile applications that solve real-world problems. " 
                   " I apply my skills through projects, internships, and ideas that contribute to the progress of the digital age.",
                   style: TextStyle(fontSize: 16),
@@ -317,7 +317,7 @@ class PortfolioPage extends StatelessWidget {
                     ProjectCard(title: 'Portfolio Website', description: 'This site, built in Flutter and hosted on Firebase.'),
                     ProjectCard(title: 'Orlando Korean Culture Center Website', description: 'Function, homegrown website built for the OKCC to automate payments and signsups using PERN.'),
                     ProjectCard(title: 'Autocommit.AI', description: 'To be announced: Github auto committer with AI changelist generation.'),
-                    ProjectCard(title: 'Stride', description: 'To be announced: Practical tool for runners to improve form using AI, Machine Learning, and Computer Vision.'),
+                    ProjectCard(title: 'Stride', description: 'Built a Flutter ML app using Gemini, Supabase, MediaPipe, and OpenCV to analyze running form and deliver coach-personalized feedback.'),
                   ],
                 ),
                 const SizedBox(height: 48),
@@ -335,6 +335,7 @@ class PortfolioPage extends StatelessWidget {
                     TimelineEvent(year: '2024', event: 'Built first data structures (2-4 Tree and SkipList.)'),
                     TimelineEvent(year: '2025', event: 'Accepted into the UCF Accelerated Masters program'),
                     TimelineEvent(year: '2025', event: 'Begun internship at Toptech Systems'),
+                    TimelineEvent(year: '2025', event: 'Attending first hackathon: Gemiknights @UCF'),
                     TimelineEvent(year: '2027', event: 'Graduating and seeking Software Engineer role at big tech'),
                   ],
                 ),
@@ -379,11 +380,11 @@ class PortfolioPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       const Text(
-                        "One day, I hope to live and work between two of the most beautiful and important cities in the world — Seoul and Washington D.C. " 
+                        "One day, I hope spend more time  in two of the most beautiful and important cities in the world: Seoul and Washington D.C. " 
                         "Their contrast in culture, architecture, and pace of life has inspired me to dream big and think globally. "
                         "There is so much more to the world than my home town. I hope to travel between these cities to enrich myself in Korean culture, "
-                        "learn more about American History, and become fluent in English, Spanish, and Korean. My favorite flower is the cherry blossom or 벚꽃." 
-                        "If given the privilege to live in Washington D.C. I hope to grow my own cherry blossoms.",
+                        "learn more about American History, and become fluent in Korean. My favorite flower is the cherry blossom or 벚꽃. " 
+                        "If given the privilege to live in Washington D.C. or Seoul I hope to grow my own cherry blossoms.",
                         style: TextStyle(fontSize: 16),
                       ),
                       const SizedBox(height: 16),
@@ -396,16 +397,13 @@ class PortfolioPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 16),
                       const Text(
-                        "These cities have reminded me that it is okay to take risks, to leave your comfort zone, and to fall in love with the uncertain. They are opposite to the casual "
-                        "suburban life that I am used to. Cities are high energy environments bustling with creativity, ambition, and opportunity. Moving to a big city is the physical embodiement "
-                        "of stepping out of a comfort zone to pursue opportunity. The cities have endless opportunity for business, software, and cultural enrichiment. "
-                        "I live by the belief that nothing is my life is written until I accomplish it. I believe the future is created by those who are brave enough to chase what matters most to them. "
-                        "Although I am just starting my career, I have the big picture in mind. My goal is to make long-lasting contributions to this planet in the form of software, service, "
-                        "and my future family. When I retire, I would like to look back on all that I have accomplished in my life and be proud of what I did. "
-                        "I aspire to live with no regrets by always pursuing improvement, ambition, and the welfare of those around me. Below is a picture from one of my favorite shows. " 
-                        "This image represents the admiration for our beautiful world for what it is. Earth can be scary for some but exciting for others. Perspective determines what one sees "
-                        "and so I choose to see opportunities in everything.",
+                        "Exploring the world's great cities convinced me that with disciplined effort, I can earn a spot at any company I admire. "
+                        "I rely on project-based learning, constantly shipping prototypes and side-projects that stretch my skills. "
+                        "Brainstorming fresh startup ideas is a daily habit that allows me to fuse my creativity with my passion for software. I keep a running list and turn the best concepts into proof-of-concept apps. "
+                        "Alongside that, I'm diving deeper into AI and machine learning while experimenting with new frameworks and languages to stay versatile. "
+                        "My guiding principle is simple: keep learning, keep building, and use every lesson to create software that improves lives. I believe in hard work and smart work to accomplish my dreams.",
                         style: TextStyle(fontSize: 16),
+                        textAlign: TextAlign.justify,
                       ),
                       const SizedBox(height: 16),
                       const SizedBox(height: 24),
